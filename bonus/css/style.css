@@ -75,12 +75,8 @@ cursor: pointer;
 .thumbnails-cards{
     height: calc(100% / 5 - 10px);
     margin: 5px 0;
-    background-color: red;
     opacity: 0.5;
-    width: 50px;
 }
-
-
 
 .thumbnails-cards.opacity{
     opacity: 1;

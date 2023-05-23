@@ -15,17 +15,17 @@ let thumbnails = '';
 
 //ciclo for per le immagini
 for(let i=0; i < imgs.length; i++){
-    let current_img = `<img src="./img/${imgs[i]}" alt="">`
-    slide += `<div class="slide"> ${current_img} </div>`
-    thumbnails += `<div class="thumbnails-cards"> ${current_img}</div>`
+    let current_img = `<img src="./img/${imgs[i]}" alt="">`;
+    slide += `<div class="slide"> ${current_img} </div>`;
+    thumbnails += `<div class="thumbnails-cards"> ${current_img}</div>`;
 }
 
-img_container.innerHTML = slide
+img_container.innerHTML = slide;
 thumbnails_container.innerHTML = thumbnails;
 let active_slide = 0;
 let opacity_thumbnail = 0;
-let all_slides = document.getElementsByClassName('slide')
-let all_thumbnails = document.getElementsByClassName('thumbnails-cards')
+let all_slides = document.getElementsByClassName('slide');
+let all_thumbnails = document.getElementsByClassName('thumbnails-cards');
 all_thumbnails[opacity_thumbnail].classList.add('opacity');
 all_slides[active_slide].classList.add('active');
 
@@ -45,8 +45,6 @@ next_btn.addEventListener('click', function(){
         all_thumbnails[opacity_thumbnail].classList.remove('opacity');
         opacity_thumbnail = (opacity_thumbnail + 1) % imgs.length ;
         all_thumbnails[opacity_thumbnail].classList.add('opacity');
- 
-   
 })
 
 //Pulsante per tornare indietro
